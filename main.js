@@ -7,10 +7,10 @@ const {
 } = require('@adiwajshing/baileys')
 const fs = require('fs')
 const moment = require('moment-timezone')
-const { wait, banner, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, start, info, success, close } = require('./database/lib/functions')
-const { color } = require('./database/lib/color')
+const { wait, banner, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, start, info, success, close } = require('./lib/functions')
+const { color } = require('./lib/color')
 const _welkom = JSON.parse(fs.readFileSync('./database/group/welcome.json'))
-const setting = JSON.parse(fs.readFileSync('./database/setting.json'))
+const setting = JSON.parse(fs.readFileSync('./setting.json'))
 
 session = setting.session
 
