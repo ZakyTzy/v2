@@ -15,8 +15,8 @@ const setting = JSON.parse(fs.readFileSync('./setting.json'))
 session = setting.session
 
 
-require('./Dhani.js')
-nocache('./Dhani.js', module => console.log(`${module} telah di update!`))
+require('./mufar.js')
+nocache('./mufar.js', module => console.log(`${module} telah di update!`))
 
 const starts = async (Dhani = new WAConnection()) => {
     Dhani.logger.level = 'warn'
@@ -37,7 +37,7 @@ const starts = async (Dhani = new WAConnection()) => {
         fs.writeFileSync(`./${session}.json`, JSON.stringify(Dhani.base64EncodedAuthInfo(), null, '\t'))
 
     Dhani.on('chat-update', async (message) => {
-        require('./Dhani.js')(Dhani, message, _welkom)
+        require('./mufar.js')(Dhani, message, _welkom)
     })
 Dhani.on("group-participants-update", async (anu) => {
 
